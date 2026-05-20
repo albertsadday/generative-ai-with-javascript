@@ -15,7 +15,7 @@ console.log("SERVER page: ", page);
 dotenv.config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const defaultPort = parseInt(process.env.PORT, 10) || 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -73,6 +73,20 @@ app.post('/send', async (req, res) => {
   }
 });
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+function startServer(port) {
+  const server = app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+  });
+
+  server.on('error', (error) => {
+    if (error.code === 'EADDRINUSE') {
+      console.warn(`Port ${port} is in use. Trying port ${port + 1}...`);
+      startServer(port + 1);
+    } else {
+      console.error('Server error:', error);
+      process.exit(1);
+    }
+  });
+}
+
+startServer(defaultPort);
