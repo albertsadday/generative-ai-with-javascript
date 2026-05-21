@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Avatar estilizado de Jacobo Grinberg">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200" role="img" aria-label="Avatar de Jacobo Grinberg">
   <defs>
     <linearGradient id="avatar-bg" x1="0" x2="1">
       <stop offset="0%" stop-color="#0f172a"/>
-      <stop offset="100%" stop-color="#0b1020"/>
+      <stop offset="100%" stop-color="#1e293b"/>
     </linearGradient>
+    <radialGradient id="halo" cx="50%" cy="30%" r="55%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.75"/>
+      <stop offset="100%" stop-color="#2563eb" stop-opacity="0.0"/>
+    </radialGradient>
   </defs>
-  <rect width="100%" height="100%" rx="30" fill="url(#avatar-bg)"/>
-  <circle cx="100" cy="90" r="40" fill="#f6e8d9"/>
-  <path d="M60 120 C80 160, 120 160, 140 120" fill="#1e293b"/>
-  <rect x="60" y="82" width="80" height="24" rx="12" fill="#2d3748"/>
-  <path d="M72 88 L88 88" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>
-  <path d="M112 88 L128 88" stroke="#cbd5e1" stroke-width="6" stroke-linecap="round"/>
+
+  <rect x="0" y="0" width="200" height="200" rx="30" fill="url(#avatar-bg)"/>
+  <circle cx="100" cy="72" r="42" fill="url(#halo)"/>
+  <circle cx="100" cy="80" r="34" fill="#f8eedc"/>
+  <path d="M62 118 C82 158, 118 158, 138 118" fill="#1f2937"/>
+  <path d="M64 88 C76 70, 90 62, 100 62 C110 62, 124 70, 136 88" fill="#111827"/>
+  <rect x="68" y="84" width="24" height="14" rx="7" fill="#0f172a"/>
+  <rect x="108" y="84" width="24" height="14" rx="7" fill="#0f172a"/>
+  <path d="M70 104 Q100 124 130 104" stroke="#475569" stroke-width="4" fill="none" stroke-linecap="round"/>
+
+  <path d="M72 58 C84 44, 116 44, 128 58" stroke="#c7d2fe" stroke-width="4" fill="none" opacity="0.9"/>
+  <path d="M82 48 L100 70 L118 48" stroke="#93c5fd" stroke-width="3" fill="none" opacity="0.85"/>
+  <path d="M96 28 C98 20, 102 20, 104 28" stroke="#a78bfa" stroke-width="3" fill="none" opacity="0.9"/>
+  <path d="M68 64 C70 82, 90 88, 100 88 C110 88, 130 82, 132 64" stroke="#7c3aed" stroke-width="2" fill="none" opacity="0.7"/>
 </svg>

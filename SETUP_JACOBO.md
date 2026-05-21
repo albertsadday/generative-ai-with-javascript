@@ -29,9 +29,12 @@ node setup-jacobo.js
 
 ### Opción 2: Descargar manualmente
 
-1. Descarga la imagen de Jacobo desde: https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBqXLJUaznDHpoZGnAbu4WzXBE5nufMAXh1tn6P8itOyjzoyZxgnkgrCO52ZXGw-C5eZGx5MY7qxy9IfBMBvbbDjFQQIkrCuvTJjAwnw&s=10
+1. El script `setup-jacobo-final.mjs` descargará la imagen desde esta página de referencia:
+   https://fundacionmesaverde.org/informacion-curso-jacobo-grinberg-conciencia-y-realidad/
 
-2. Guarda como: `app/public/images/jacobo.jpeg`
+2. Si el script no puede encontrar una imagen directa en la página, usará un respaldo automático.
+
+3. Guarda el resultado como: `app/public/images/jacobo.jpeg`
 
 3. Haz una copia para el avatar: `app/public/images/jacobo-avatar.jpeg`
 
